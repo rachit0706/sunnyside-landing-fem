@@ -1,0 +1,21 @@
+@mixin headingStyle {
+    text-align: center;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+}
+
+@mixin contactButton {
+    
+}

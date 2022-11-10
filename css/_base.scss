@@ -1,0 +1,70 @@
+@use './variables' as *;
+@use './resusable' as *;
+
+:root {
+    font-size: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // border: 1px solid black;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 78vh auto auto;
+
+}
+
+footer {
+    background-color: rgba(78, 199, 174, 0.65);
+    color: $Dark-desaturated-cyan;
+    @include flexColumn;
+    padding: 2.5rem 1.5rem;
+
+    .brand-name {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 1.7rem;
+    }
+
+    .footer-links {
+        @include flexRow;
+        gap: 4rem;
+        margin-bottom: 3.5rem;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                color: $White;
+            }
+        }
+    }
+
+    .footer-icons {
+        @include flexRow;
+        gap: 1rem;
+
+        img:hover {
+            cursor: pointer;
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+.attribution {
+    font-size: .9rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
